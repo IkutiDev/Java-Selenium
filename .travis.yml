@@ -1,0 +1,10 @@
+language: java
+addons:
+  firefox: latest
+  chrome: stable
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y dbus-x11
+  - export $(dbus-launch)
+  - export NSS_USE_SHARED_DB=ENABLED
+  - firefox &
